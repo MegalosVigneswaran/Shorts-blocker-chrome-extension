@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Youtube shorts blocker",
+    "version": "0.5",
+    "description": "Youtube shorts make you waste your time. This extension blocks all types of shorts content.",
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "scripting",
+        "webNavigation"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.youtube.com/*"],
+            "js": ["control.js"]
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+<!-- app.component.html -->
+
+<button (click)="openDialog()">Open Dialog</button>
+
+<ng-template #dialogTemplate let-data>
+  <mat-dialog-container>
+    <h1 mat-dialog-title>Shorts blocker<h1>
+    <div mat-dialog-content>
+      <p>Your are not allowed to use the shorts 
+        If you try to open shorts it will automatically go to youtube home page
+
+        Keep your fresh and productive.
+      </p>
+    </div>
+    <div mat-dialog-actions>
+      <button mat-button (click)="closeDialog()">Close</button>
+    </div>
+  </mat-dialog-container>
+</ng-template>
